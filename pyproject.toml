@@ -1,0 +1,31 @@
+[project]
+name = "solitaire_solver"
+description = "A Python program that models and solves various kinds of card solitaires."
+authors = [
+    {name = "Jackson Humphrey", email = "jackson.s.humphrey@gmail.com"},
+]
+
+requires-python = ">=3.10.8"
+
+[tool.pylint.messages-control]
+disable = [
+    "too-few-public-methods",
+]
+
+[tool.coverage.run]
+command_line = "-m unittest"
+branch = true
+dynamic_context = "test_function"
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "coverage: disable",
+    "def __str__",
+    "def __repr__",
+    "raise NotImplementedError",
+]
+precision = 2
+
+[tool.coverage.html]
+show_contexts = true
